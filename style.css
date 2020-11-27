@@ -65,8 +65,10 @@ span {
 }
 
 .btns {
-    height: 2.5rem;
+    height: 5rem;
     background-color: #FFFF;
+    border-top: 1px solid var(--color-gray-ligth);
+    border-bottom: 1px solid var(--color-gray-ligth)
 }
 .btns ul {
     display: flex;
@@ -94,7 +96,22 @@ span {
     background-color: transparent;
 
 }
-
+/*PRIMEIRO SLID*/
+#images-body-container{
+    margin: 5rem 0 0 5rem;
+    
+    
+}
+.images-body{
+    width: 200px;
+    margin: 1rem;
+}
+.images-body:hover{
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+/*FIM */
 /* MOVIE CAROUSEL */
 .filme{
     width: 100px;
@@ -103,6 +120,30 @@ span {
 .gallery{
     display: flex;
 }
+
+
+#ThumbnailCarousel div {
+    height:250px;
+    width:100%;
+}
+
+#ThumbnailCarousel.carousel {
+    padding-top:30px;
+    text-align:center;
+}
+
+.col-md-3 .img-thumbnail {
+    height:100%;
+}
+#box-container-carousel{
+    margin-top: 1rem;
+}
+p{
+    font-weight: 700;
+    color:#000;
+    margin-left:1rem;
+}
+
 /* End carousel Movie*/
 a {
     color: #666;
@@ -116,6 +157,7 @@ a:hover {
     align-items: center;
     height: 5rem;
     justify-content: space-around;
+    margin:0 auto;
 }
 .logo-footer {
     margin-right: 0.8rem;
@@ -127,7 +169,7 @@ a:hover {
 
 .page-footer {
     align-items: center;
-    margin-top: 22rem;
+    margin-top: 5rem;
 }
 
 .logo-google-apple {
@@ -141,24 +183,17 @@ a:hover {
 
 .footer-copy{
  background-color:var(--color-with);
- margin-top: 26rem;
+ 
 
 }
 @media screen and (max-width: 465px) 
 {
   .footer-copy
    {
-    margin-top: 65rem;
+    margin-top: 2rem;
    }
    .col-md-3{
        margin-top: 5rem;
    }
-   .logo-google-apple{
-       
-   }
-   }
-
-.page-footer{
-    margin:auto;
   
-}
+   }

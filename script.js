@@ -1,82 +1,38 @@
+let images = new Array();
+$.ajax({
+    url: "https://sky-frontend.herokuapp.com/movies",
+    success: function(apiresp){ 
+        let filmescard = Object.entries(apiresp);
+        let content = "";
+        filmescard[0][1].items.forEach(elemento => {
+            images.push(elemento.images[0].url)
+        });
+        filmescard[2][1].movies.forEach(element => {
+            $('#images-body-container').append(`<img class='images-body' src=${element.images[0].url}>`);
+        });  
+      
 
-const requisicao = fetch("https://sky-frontend.herokuapp.com/movies").then(response => {
-    return response.json();
-}).then(json => {
-    console.log(json);
-    carrosel(json);
-
-});
-
-function carrosel(lista) {
-    const movies = lista.find(carrosel => carrosel.type === 'highlights')
-    movies.items.forEach(ll => {
-        $('.item').append(`<img src='${ll.images[0].url}' alt='${ll.title}' class='filme'/> `)
-    })
-}
-
-/*function skyFilmes(lista) {
-    const filmes = lista.find(categoria => categoria.type === 'carousel-portrait');
-    filmes.movies.forEach(movie => {
-        $('#movie').append(`<img src='${movie.images[0].url}' alt='${movie.title}' class="skylist" />`)
-    })
-}*/
-
-/*fetch ('https://sky-frontend.herokuapp.com/movies')
-.then(response => response.json())
-.then(jsonBody => {
-   
-    console.log(jsonBody)
-
-    movie(jsonBody)
-});
-
-function movie(filmes) {
- const resp = filmes.find(cards =>cards.type === "highlights")
-console.log(resp)
-
- resp.items.forEach(xrh => {
-    $('.card').append(`<img src="${xrh.images[0].url}" 
-    alt='${xrh.title}" class="fotos">`)
-
- });
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*async function getMovie(){
-    const response = await fetch('https://sky-frontend.herokuapp.com/movies')
-    
-    return response.json()
-} 
-
-getMovie().then(data => console.log(data))
-
-getMovie().then(data => {
-    const movie = data.items.filter()
-    const infor = []
-
-    for (let m of movie){
-       infor.push({
-           'title':`$(m.title.first)`,
-           'movies': m.movies.first,
-           
-       }) 
+        let flag = true;
+        let counter = 0;
+        images.forEach(element => {
+            let elementToAdd = `<div class="carousel-item">
+            <img class="d-block w-100" src="${element}" alt="Second slide">
+          </div>`;
+          let indicatorElement = `<li data-target="#carouselWithIndicators" data-slide-to="${counter}"></li>`
+            if (flag){
+                elementToAdd = `<div class="carousel-item active">
+                <img class="d-block w-100" src="${element}" alt="Second slide">
+              </div>`;
+              indicatorElement = `<li data-target="#carouselWithIndicators" data-slide-to="${counter}" class="active"></li>`
+                flag=false;
+            }
+            
+          $('#container-caroussel').append(elementToAdd);
+          $('#carouselIndicators').append(indicatorElement);
+          counter++;
+        });
+    },
+    error: function(){
+        alert("There was an error.");
     }
-   console.log(movie)
-})*/
+});
