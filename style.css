@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-gray-base: #222;
+    --color-gray-dark: #333;
+    --color-gray: #555;
+    --color-gray-ligth: #777;
+    --color-with: #eee;
+    --color-orange: #d9534f;
+    font-family:'Roboto', sans-serif;
+}
+
+/*Gerais*/
+.row {
+    margin: 0;
+}
+.container {
+    padding: 50px 0;
+    height: 20vh;
+}
+
+/* Barra de navegação*/
+
+header .navbar {
+    background-color: var(--color-with);
+    height: 5%;
+
+}
+#nav.container {
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+.nav-link {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem;
+    outline: none;
+}
+.nav-link-btn {
+    border:none;
+    margin: 0.6rem;
+    background-color: transparent;
+    
+}
+span {
+    margin-left: 0.3rem;
+    font-weight: 600;
+}
+
+.nav-item-play {
+    margin-right: 30rem;
+}
+.nav-link .fas {
+    color: #343a40;
+}
+
+.btns {
+    height: 2.5rem;
+    background-color: #FFFF;
+}
+.btns ul {
+    display: flex;
+    margin: 2rem;
+    list-style: none;
+    outline: none;
+    justify-content: space-around;
+}
+
+.btns .btns-ul-2{
+    color: #343a40;
+    width: 100px;
+    border: none;
+    font-weight: 700;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+
+}
+
+.btns .btns-ul-2:hover {
+    color: var(--color-orange);
+    cursor: pointer;
+    border-bottom: 4px solid var(--color-orange);
+    background-color: transparent;
+
+}
+
+/* MOVIE CAROUSEL */
+.filme{
+    width: 100px;
+    display: flex;
+}
+.gallery{
+    display: flex;
+}
+/* End carousel Movie*/
+a {
+    color: #666;
+}
+a:hover {
+    color: #E0180C;
+}
+.menu-footer{
+    display: flex;
+    background-color: var(--color-with);
+    align-items: center;
+    height: 5rem;
+    justify-content: space-around;
+}
+.logo-footer {
+    margin-right: 0.8rem;
+}
+.text-logo {
+    font-weight: 600;
+    color: #666;
+}
+
+.page-footer {
+    align-items: center;
+    margin-top: 22rem;
+}
+
+.logo-google-apple {
+    display: flex;
+}
+.bold{
+    font-weight: 700;
+    color:var(--color-gray);
+    
+}
+
+.footer-copy{
+ background-color:var(--color-with);
+ margin-top: 26rem;
+
+}
+@media screen and (max-width: 465px) 
+{
+  .footer-copy
+   {
+    margin-top: 65rem;
+   }
+   .col-md-3{
+       margin-top: 5rem;
+   }
+   .logo-google-apple{
+       
+   }
+   }
+
+.page-footer{
+    margin:auto;
+  
+}
