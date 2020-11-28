@@ -151,49 +151,93 @@ a {
 a:hover {
     color: #E0180C;
 }
+.container-footer{
+    width: 100%;
+    position: absolute;
+}
 .menu-footer{
-    display: flex;
+    width: 100%;
     background-color: var(--color-with);
-    align-items: center;
-    height: 5rem;
-    justify-content: space-around;
-    margin:0 auto;
-}
-.logo-footer {
-    margin-right: 0.8rem;
-}
-.text-logo {
-    font-weight: 600;
-    color: #666;
-}
-
-.page-footer {
-    align-items: center;
-    margin-top: 5rem;
-}
-
-.logo-google-apple {
     display: flex;
-}
-.bold{
+    justify-content: space-around;
+    margin-top: 1rem;
+    height: 5rem;
+    align-items: center;
+  }
+  .menu-footer ul li{
+    text-decoration: none;
+    display: inline;
+    margin: 0 .8rem;
+  }
+  .menu-footer a{
+    text-decoration: none;
+    color: gray;
+  }
+  .footer-infor{
+      width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .infor-one .logo-one{
+    width: 3rem;
+    margin-right: .5rem;
+  }
+  .footer-infor .logo-text{
+   display: flex;
+   align-items: center;
+   font-weight: 700;
+   color: var(--color-gray);
+  }
+  
+  .footer-infor .infor-one p{
+    width: 15rem;
+  }
+  .footer-infor .infor-one .logo-sky-play-apple{
+    display: flex;
+    margin: 1rem;
+  }
+  
+  
+   ul li{
+    list-style: none;
+    margin:1rem 0;
+    font-weight: 100;
+  }
+  a{
+    text-decoration: none;
+    color: var(--color-gray);
+  }
+  .title-footer{
     font-weight: 700;
-    color:var(--color-gray);
+  }
+  
+   #footer-infor-two{
+    display: flex;
+    width: 100%;
     
-}
-
+  }
+  .menu-footer{
+    margin-bottom:1rem;
+  }
+ 
 .footer-copy{
  background-color:var(--color-with);
  
 
 }
-@media screen and (max-width: 465px) 
-{
+@media screen and (min-width:465px){
   .footer-copy
    {
+       
     margin-top: 2rem;
    }
    .col-md-3{
        margin-top: 5rem;
+       width: 100%;
    }
   
+
    }
+   
+
+   
